@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,25 +14,28 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Objetivos</a></li>
-                <li><a href="#">Tests</a></li>
-                <li><a href="#"> Encuentranos</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#tests">Tests</a></li>
+                <li><a href="#contactanos"> Contactanos</a></li>
+                <li><a href="#encuentranos"> Encuentranos</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="fondo">
+    <div class="fondo" id="inicio">
         <div class="contenedor">
-            <div class="tarjetas">
+            <div class="tarjetas" >
                 <p class="titulo">Bienvenido </p>
                 <p class="parrafo">Esta página está diseñada para que puedas identificar la mejor manera de estudiar y así mejorar tu rendimiento académico. Esperamos poder ayudarte a convertirte en la mejor versión de ti mismo :D</p>
+                
             </div>
         </div>
+        <div id="objetivos"></div>
     </div>
-
+    
     <!-- Objetivos de la página -->
-    <div class="objetivos">
+    <div class="objetivos" >
         <h1> En esta página lograrás</h1>
     </div>
     
@@ -47,6 +50,7 @@
         <div style="--r:25;" class="glass">
           <p>Brindar ayuda al estudiante para mejorar el rendimiento en sus estudios mediante materiales de apoyo que serán brindados según el resultado de cada estudiante.</p>
         </div>
+        <div id="tests"></div>
       </div>  
       
       <section class="tarjeta-seccion">
@@ -85,6 +89,7 @@
             <button class="btn" style="margin: 30px;">
                 Iniciar test
             </button>
+            <div id="contactanos"></div>
         </div>
     </section>
 
@@ -122,65 +127,51 @@
             
     </section>
 
-    <section class="ayuda-personalidad">
-        <h1>
-            Según tu personalidad
-        </h1>
-        <p>
-            Aquí, en caso de que el estudiante requiera, según su tipo de personalidad loaconsejaremos. Le aconsejaremos como podría desarrollarse mejor en un entorno social, o también cómo podría ser mas carismático. Todo esto según su personalidad 
-        </p>
-        <img src="" alt="personalidad test">
-
-        <button>
-            Siguiente
-        </button>
-    </section>
-
-    <section class="ayuda-inteligencia">
-        <img src="" alt="inteligencia test">
-        <h1>
-            Según tu inteligencia
-        </h1>
-
-        <p>
-            Aquí, en caso de que el estudiante lo requiera, le darémos consejos de cómo pude mejorar su rendimiento académico. Aconsejandole, según sus tipos de inteligencia mas destacados, cómo puede desarrollar un método de estudio eficiente. 
-        </p>
-
-        <button>
-            anterior
-        </button>
-    </section>
+    <br> <br>
 
     <section class="encuentranos">
-        <h1>
-            Encuentranos
-        </h1>
-        <p>
-            Puedes agendar tu cita para reservar una reunión con la psicologa si crees que sea necesario.
-        </p>
-
-        <h3>
-            Ubicación
-        </h3>
-        <p>3a Calle 14-36 Quetzaltenango</p>
-
-        <img src="" alt="Ubicación">
-    </section>
-
-    <footer>
-        © 2024 Universidad Mesoamericana
-Proyecto Estudiantil “De estudiantes para estudiantes”
-    </footer>
-    <br> <br>
-    <br>
-
-   
+        <div class="izq-encuentranos">
+            <h1>
+                Encuentranos
+            </h1>
+            <p>
+                Puedes agendar tu cita para reservar una reunión con la psicologa si crees que sea necesario.
+            </p>
     
-      <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
-      <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
-      <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
-      <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
-
-
+            <h3>
+                Ubicación
+            </h3>
+            <p>3a Calle 14-36 Quetzaltenango</p>   
+            <a href="https://maps.app.goo.gl/BsMFqcsWdDnvh8Gq5" target="_blank" style="text-decoration: none;">
+                <button class="cssbuttons-io-button">
+                    Llevame
+                    <div class="icon">
+                      <svg
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                          d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+            </a>
+        </div>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.6883276633043!2d-91.5206894884452!3d14.84274027104098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858ea2ab00334b2f%3A0xb70aba74577dd282!2sUniversidad%20Mesoamericana!5e0!3m2!1ses!2sgt!4v1715811957050!5m2!1ses!2sgt" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer>
+        <p>
+            © 2024 Universidad Mesoamericana
+        </p>
+        <p>
+            Proyecto Estudiantil “De estudiantes para estudiantes”
+        </p>
+    </footer>
     </body>
 </html>
