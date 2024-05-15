@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: #01633b;
+    color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.titulo_encabezado{
+    font-size: 40px;
+    color: #fff;
+    padding-left: 20px;
+}
+.umes{
+    display: flex;
+}
+
+.umes img{
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #01633b;
+    padding: 10px 0;
+    transition: 1.5s;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #a19999;
+}
+
+.fondo {
+    background-image: url('https://www.mesoamericana.edu.gt/wp-content/uploads/2018/01/Sin-ti%CC%81tulo-s.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: #fff;
+    border: #01633b solid 3px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.tarjetas {
+    transition: transform 0.5s ease;
+}
+
+.tarjetas:hover {
+    transform: scale(1.05);
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.parrafo {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media  (max-width: 695px) {
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .umes{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo_encabezado{
+        font-size: 30px;
+    }
+
+    .umes img{
+        height: 50px;
+    }
+
+    header{
+        position: relative;
+    }
+}
+
+.objetivos{
+    background-color: #01633b;
+    color: white;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01633b;
+    margin-top: 0px;
+    padding: 25px;
+    height: auto;
+    color: white;
+    text-align: justify;
+  }
+  
+  .container .glass {
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    width: 20vh;
+    height: auto;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -55px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 50px;
+    margin: 30px;
+    width: 25vh;
+
+  }
+
+  .container:hover{
+    flex-wrap: wrap;
+  }
+  
+  .container .glass::before {
+    width: 20vh;
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+  }
+
+  @media (min-width:1600px ) {
+    .container:hover .glass{
+        width: 40vh; 
+        font-size: 20px;
+    } 
+}
+
+  .tarjeta-seccion{
+    display: flex;
+    color: #01633b;
+  }
+
+  .tarjeta-seccion p{
+    font-size: 17px;
+  }
+
+  .titulos-tarjetas{
+    margin-top: 0px;
+    font-size: 50px;
+  }
+
+  .primera_seccion{
+    padding: 40px;
+    width: 20%;
+  }
+
+  .segunda_seccion{
+    padding: 40px;
+    text-align: justify;
+  }
+
+  @media (max-width:513px) {
+    .container .glass{
+        width: 15vh;
+    }
+
+    .tarjeta-seccion{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+  }
+
+  .boton-leermas {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   .boton-leermas.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   .boton-leermas.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background:#01633b;
+    border-radius: 1.625rem;
+   }
+   
+   .boton-leermas.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   .boton-leermas.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   .boton-leermas.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   .boton-leermas.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color:#01633b;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   .boton-leermas:hover .circle {
+    width: 100%;
+   }
+   
+   .boton-leermas:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   .boton-leermas:hover .button-text {
+    color: #fff;
+   }
+
+   .tarjeta-seccion-2{
+    background-color: #01633c;
+  }
+  
+  .test_persona{
+    color: #fff;
+    font-size: 30px;  
+    margin: 20px;
+  }
+   .btn {
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+  }
+  
+  .btn:hover {
+    color: #01633b;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #fff;
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  .btn:hover::before {
+    width: 160%;
+  }
+  
+  .fondo-2 {
+    background-image: url('/recursos/fondo-2.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+}
