@@ -7,7 +7,7 @@ body {
 header {
     background: #01633b;
     color: #fff;
-    padding: 20px;
+    padding: 5px;
     position: sticky;
     top: 0;
     display: flex;
@@ -17,7 +17,7 @@ header {
 }
 
 .titulo_encabezado{
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
     padding-left: 20px;
 }
@@ -26,7 +26,8 @@ header {
 }
 
 .umes img{
-    height: 100px;
+  margin-left:20px;
+  height: 60px;
 }
 
 nav {
@@ -186,7 +187,7 @@ nav {
     bottom: 0;
     width: 100%;
     height: 40px;
-    background: rgba(255, 255, 255, 0.05);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,6 +232,18 @@ nav {
   @media (max-width:513px) {
     .container .glass{
         width: 15vh;
+    }
+
+    .tarjeta-seccion{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+  }
+  @media (max-width:440px) {
+    .container .glass{
+        width: 13vh;
+        font-size: 14px;
     }
 
     .tarjeta-seccion{
@@ -491,4 +504,91 @@ nav {
     width: 100%;
   }
   
+}
+
+.encuentranos{
+  background-color: #01633b;
+  color: #fff;
+  display: flex;
+  padding: 30px;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
+.encuentranos h1{
+  font-size: 50px;
+}
+
+.izq-encuentranos{
+  margin: 20px;
+}
+
+.ubica{
+  padding-right: 50px;
+  height: 50vh;
+}
+
+.cssbuttons-io-button {
+  background:white;
+  color:#01633b;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #01633b;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #01633b;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #01633b;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+footer{
+  text-align: center;
+}
+
+@media (max-width: 753px){
+.encuentranos{
+  flex-wrap: wrap;
+  justify-content: center;
+}
 }
