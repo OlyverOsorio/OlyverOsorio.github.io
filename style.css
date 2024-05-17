@@ -593,7 +593,106 @@ footer{
 }
 }
 
+.personalidad{
+  width: 50%;
+  padding: 20px;
+}
 
+.personalidad h1 {
+  text-align: center;
+  color: #01633b;
+}
+
+.inteligencia{
+  padding: 20px;
+  width: 50%;
+}
+
+.inteligencia h1 {
+  text-align: center;
+  color: #01633b;
+}
+
+.definiciones{
+  margin: 30px;
+  display: flex;
+  font-size: 2.5vh;
+  text-align: justify;
+}
+
+@media (max-width: 695px){
+  .definiciones{
+    flex-wrap: wrap;
+  }
+  .personalidad{
+    width: 100%;
+  }
+  .inteligencia{
+    width: 100%;
+  }
+}
+
+.adorno{
+  padding: 30px;
+  background-color: #01633b;
+  color: white;
+  font-size: 2vh;
+  text-align: justify;
+}
+
+.adorno h1{
+  font-size: 4vh;
+  text-align: center;
+}
+
+.afectan{
+  display: flex;
+}
+
+.afectan h2{
+  text-align: center;
+  font-size: 3vh;
+}
+
+.afectan-personalidad{
+  padding: 20px;
+}
+
+.afectan-inteligencia{
+  padding: 20px;
+}
+
+@media (max-width: 921px    ){
+  .afectan{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px    ){
+  .afectan h2{
+    text-align: center;
+    font-size: 2.2vh;
+  }
+  
+  .afectan-personalidad{
+    padding: 0px;
+  }
+  
+  .afectan-inteligencia{
+    padding: 0px;
+  }
+
+  .adorno{
+    padding: 20px;
+    padding-left: 10px;
+    font-size: 2vh;
+  }
+
+  .adorno h1{
+    font-size: 2.3vh;
+    text-align: center;
+  }
+}
 
 /* PARTE PARA EL FORMULARIO */
 
