@@ -1,169 +1,713 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="umes">
-            <img src="/recursos/logomeso.png" alt="Logo Mesoamericana">
-            <h1 class="titulo_encabezado">UMES</h1>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/index.html">Objetivos</a></li>
-                <li><a href="/index.html">Tests</a></li>
-                <li><a href="/index.html"> Contactanos</a></li>
-                <li><a href="/index.html"> Encuentranos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1 style="text-align: center; color: red;">
-        !!EN DESARROLLO!!
-    </h1>
-    <section class="definiciones">
-        <div class="personalidad">
-            <h1>
-                ¿Qué es la personalidad?
-            </h1>
-            <p>
-                Personalidad es el conjunto de características psicológicas y patrones de comportamiento que diferencian a una persona de otra. Incluye rasgos como la extroversión, la introversión, la amabilidad, la responsabilidad, el neuroticismo y la apertura a la experiencia. La personalidad influye en cómo pensamos, sentimos y actuamos en diversas situaciones de la vida.
-            </p>
-        </div>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        <div class="inteligencia">
-            <h1>
-                ¿Qué es la inteligencia?
-            </h1>
+header {
+    background: #01633b;
+    color: #fff;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    flex-wrap: wrap;
+}
 
-            <p>
-                Inteligencia es la capacidad de aprender, entender, razonar, resolver problemas y adaptarse a nuevas situaciones. Incluye habilidades como el pensamiento abstracto, la comprensión compleja, el aprendizaje de la experiencia y el uso del conocimiento para manejar el entorno. La inteligencia se puede medir a través de pruebas estandarizadas y puede manifestarse en diversas formas, como la inteligencia lógica, lingüística, espacial, musical, interpersonal e intrapersonal.
-            </p>
-        </div>
-    </section>
+.titulo_encabezado{
+    font-size: 30px;
+    color: #fff;
+    padding-left: 20px;
+}
+.umes{
+    display: flex;
+}
 
-    <section class="adorno">
-        <h1 class="titulo_afecta">
-            ¿Cómo afecta mi personalidad y tipo de inteligencia en mi rendimiento académico?
-        </h1>
-        <div class="afectan">
-            <div class="afectan-personalidad">
-                <h2>
-                    Personalidad
-                </h2>
-                <ul>
-                    <li>
-                        <strong>Extroversión vs. Introversión:</strong>
-                        <ul>
-                            <li><strong>Extrovertidos:</strong> Pueden participar más activamente en discusiones y trabajos en grupo, lo que puede mejorar el aprendizaje colaborativo. Sin embargo, pueden distraerse más fácilmente.</li>
-                            <li><strong>Introvertidos:</strong> Tienden a concentrarse mejor en tareas individuales y pueden ser más autodisciplinados, aunque podrían participar menos en actividades grupales.</li>
-                        </ul>
-                    </li> <br>
-                    <li>
-                        <strong>Responsabilidad:</strong> Las personas con altos niveles de responsabilidad tienden a ser organizadas, disciplinadas y confiables, lo que puede traducirse en hábitos de estudio eficaces y mejor rendimiento académico.
-                    </li><br>
-                    <li> 
-                        <strong>Apertura a la Experiencia:</strong> Aquellos con alta apertura suelen ser curiosos y creativos, lo que puede facilitar el aprendizaje y la comprensión de nuevos conceptos.
-                    </li><br>
-                    <li>
-                        <strong>Neuroticismo:</strong> Un alto nivel de neuroticismo puede llevar a ansiedad y estrés, lo cual puede interferir con el rendimiento académico. Sin embargo, en niveles bajos, la preocupación puede motivar a la preparación y al estudio.
-                    </li> <br>
-                    <li>
-                        <strong>Amabilidad:</strong> Las personas amables suelen ser cooperativas y trabajar bien en equipo, lo que puede ser beneficioso en proyectos grupales y ambientes de aprendizaje colaborativo.
-                    </li>
-                </ul>  
-            </div>
-    
-            <div class="afectan-inteligencia">
-                <h2>
-                    Inteligencia
-                </h2>
-                <ul>
-                    <li>
-                        <strong>Inteligencia Lógica-Matemática:</strong> Estos estudiantes tienden a destacar en materias que requieren habilidades de razonamiento lógico y resolución de problemas, como matemáticas y ciencias.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Lingüística:</strong> Aquellos con alta inteligencia lingüística suelen tener un buen desempeño en áreas relacionadas con la lectura, escritura y comunicación verbal, como literatura e idiomas.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Espacial:</strong> Los estudiantes con alta inteligencia espacial sobresalen en tareas que involucran visualización y manipulación de objetos, como arte, geometría y diseño.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Musical:</strong> Estos estudiantes muestran talento en áreas que requieren habilidades musicales, como música y otras actividades artísticas.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Corporal-Kinestésica:</strong> Los estudiantes con alta inteligencia corporal-kinestésica se destacan en actividades físicas y tareas que requieren coordinación motora, como deportes y danza.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Interpersonal:</strong> Aquellos con alta inteligencia interpersonal tienen habilidades para interactuar y comunicarse efectivamente con otros, lo cual es beneficioso en trabajos en grupo y actividades colaborativas.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Intrapersonal:</strong> Estos estudiantes tienen una buena comprensión de sí mismos, lo que les permite manejar mejor sus emociones y establecer metas personales, contribuyendo a un aprendizaje autodirigido efectivo.
-                    </li><br>
-                    <li>
-                        <strong>Inteligencia Naturalista:</strong> Los estudiantes con alta inteligencia naturalista tienden a destacar en áreas relacionadas con la naturaleza y las ciencias biológicas.
-                    </li>
-                </ul>
-            </div>
-        </div>       
-    </section>
+.umes img{
+  margin-left:20px;
+  height: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #01633b;
+    padding: 10px 0;
+    transition: 1.5s;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #a19999;
+}
+
+.fondo {
+    background-image: url('https://www.mesoamericana.edu.gt/wp-content/uploads/2018/01/Sin-ti%CC%81tulo-s.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: #fff;
+    border: #01633b solid 3px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.tarjetas {
+    transition: transform 0.5s ease;
+}
+
+.tarjetas:hover {
+    transform: scale(1.05);
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.parrafo {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media  (max-width: 695px) {
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .umes{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo_encabezado{
+        font-size: 30px;
+    }
+
+    .umes img{
+        height: 50px;
+    }
+
+    header{
+        position: relative;
+    }
+}
+
+.objetivos{
+    background-color: #01633b;
+    color: white;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01633b;
+    margin-top: 0px;
+    padding: 25px;
+    height: auto;
+    color: white;
+    text-align: justify;
+  }
+  
+  .container .glass {
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    width: 20vh;
+    height: auto;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -55px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 50px;
+    margin: 30px;
+    width: 25vh;
+
+  }
+
+  .container:hover{
+    flex-wrap: wrap;
+  }
+  
+  .container .glass::before {
+    width: 20vh;
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+  }
+
+  @media (min-width:1600px ) {
+    .container:hover .glass{
+        width: 40vh; 
+        font-size: 20px;
+    } 
+}
+
+  .tarjeta-seccion{
+    display: flex;
+    color: #01633b;
+  }
+
+  .tarjeta-seccion p{
+    font-size: 17px;
+  }
+
+  .titulos-tarjetas{
+    margin-top: 0px;
+    font-size: 50px;
+  }
+
+  .primera_seccion{
+    padding: 40px;
+    width: 20%;
+  }
+
+  .segunda_seccion{
+    padding: 40px;
+    text-align: justify;
+  }
+
+  @media (max-width:513px) {
+    .container .glass{
+        width: 15vh;
+    }
+
+    .tarjeta-seccion{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+  }
+  @media (max-width:440px) {
+    .container .glass{
+        width: 13vh;
+        font-size: 14px;
+    }
+
+    .tarjeta-seccion{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+  }
+
+  .boton-leermas {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
    
+   .boton-leermas.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   .boton-leermas.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background:#01633b;
+    border-radius: 1.625rem;
+   }
+   
+   .boton-leermas.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   .boton-leermas.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   .boton-leermas.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   .boton-leermas.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color:#01633b;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   .boton-leermas:hover .circle {
+    width: 100%;
+   }
+   
+   .boton-leermas:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   .boton-leermas:hover .button-text {
+    color: #fff;
+   }
 
-    <section class="info-tests">
-        <div class="fondo-2">
+   .tarjeta-seccion-2{
+    background-color: #01633c;
+  }
+  
+  .test_persona{
+    color: #fff;
+    font-size: 30px;  
+    margin: 20px;
+  }
+   .btn {
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+  }
+  
+  .btn:hover {
+    color: #01633b;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #fff;
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  .btn:hover::before {
+    width: 160%;
+  }
+  
+  .fondo-2 {
+    background-image: url('/recursos/fondo-2.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+}
 
-            <div class="contenedor">
-                <div class="tarjetas">
-                    <p>
-                        Un test de personalidad es una herramienta psicológica diseñada para evaluar y medir ciertos aspectos de la personalidad de un individuo, como rasgos, comportamientos, actitudes y características emocionales. Estos tests suelen utilizar preguntas, situaciones o tareas específicas para obtener información sobre la forma en que una persona piensa, siente y se comporta en diferentes situaciones. Existen varios tipos de pruebas de personalidad, cada una con enfoques y objetivos específicos. Algunas pruebas están diseñadas para ayudar en la selección de empleados, otras para la evaluación clínica, el asesoramiento personal o el desarrollo profesional.
-                    </p>  
-                </div>
-            </div>
+.ayuda{
+  display: flex;
+}
 
-            <div class="contenedor">
-                <div class="tarjetas">
-                    <p>
-                        Un test de inteligencias, también conocido como prueba de inteligencia múltiple, es una evaluación diseñada para medir las diferentes formas en que una persona puede ser inteligente, según la teoría de las inteligencias múltiples propuesta por Howard Gardner. Esta teoría sugiere que la inteligencia no puede ser definida por un único coeficiente intelectual (CI), sino que se manifiesta de diversas formas. Los tests de inteligencias múltiples evalúan áreas como la lingüística, lógico-matemática, espacial, musical, corporal-kinestésica, interpersonal, intrapersonal y naturalista. Cada una de estas áreas representa un tipo de inteligencia distinta, y una persona puede destacar en una o varias de ella
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br><br><br>
-    <section class="ayuda-personalidad">
-        <div>
-            <h1>
-                Según tu personalidad
-            </h1>
-            <p>
-                Aquí, en caso de que el estudiante requiera, según su tipo de personalidad loaconsejaremos. Le aconsejaremos como podría desarrollarse mejor en un entorno social, o también cómo podría ser mas carismático. Todo esto según su personalidad 
-            </p>
-        </div>
-        
-        <img src="" alt="personalidad test">
+.contacto{
+  margin: 30px;
+  padding: 20px;
+  color: #01633b;
+  text-align: justify;
+  width: 50%;
+  font-size: 20px;
+}
 
-        <button>
-            Siguiente
-        </button>
-    </section>
+.contacto h2{
+  font-size: 40px;
+  text-align: center;
+}
 
-    <section class="ayuda-inteligencia">
-        <img src="" alt="inteligencia test">
-        <h1>
-            Según tu inteligencia
-        </h1>
+.pqayuda{
+  margin: 30px;
+  padding: 20px;
+  color: #01633b;
+  text-align: justify;
+  width: 50%;
+  font-size: 20px;
+}
+.pqayuda h2{
+  text-align: center;
+  font-size: 40px;
+}
 
-        <p>
-            Aquí, en caso de que el estudiante lo requiera, le darémos consejos de cómo pude mejorar su rendimiento académico. Aconsejandole, según sus tipos de inteligencia mas destacados, cómo puede desarrollar un método de estudio eficiente. 
-        </p>
+.btn2 {
+  --color:#01633b;
+  --color2: rgb(255, 255, 255);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: .3px solid var(--color);
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+ }
+ 
+ .btn2::after, .btn2::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--color);
+ }
+ 
+ .btn2::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn2:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn2:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+ }
+ 
+ .btn2:hover {
+  color: var(--color2);
+ }
+ 
+ .btn2:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+ }
 
-        <button>
-            anterior
-        </button>
-    </section>
-</body>
-</html>
+@media (max-width: 1045px) {
+  .ayuda{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacto{
+    width: 100%;
+    justify-items: center;
+  }
+  
+  .contacto h2{
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .pqayuda{
+    width: 100%;
+  }
+  
+}
+
+.encuentranos{
+  background-color: #01633b;
+  color: #fff;
+  display: flex;
+  padding: 30px;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
+.encuentranos h1{
+  font-size: 50px;
+}
+
+.izq-encuentranos{
+  margin: 20px;
+}
+
+.ubica{
+  padding-right: 50px;
+  height: 50vh;
+}
+
+.cssbuttons-io-button {
+  background:white;
+  color:#01633b;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #01633b;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #01633b;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #01633b;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+footer{
+  text-align: center;
+}
+
+@media (max-width: 753px){
+.encuentranos{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+.personalidad{
+  width: 50%;
+  padding: 20px;
+}
+
+.personalidad h1 {
+  text-align: center;
+  color: #01633b;
+}
+
+.inteligencia{
+  padding: 20px;
+  width: 50%;
+}
+
+.inteligencia h1 {
+  text-align: center;
+  color: #01633b;
+}
+
+.definiciones{
+  margin: 30px;
+  display: flex;
+  font-size: 2.5vh;
+  text-align: justify;
+}
+
+@media (max-width: 695px){
+  .definiciones{
+    flex-wrap: wrap;
+  }
+  .personalidad{
+    width: 100%;
+  }
+  .inteligencia{
+    width: 100%;
+  }
+}
+
+.adorno{
+  padding: 30px;
+  background-color: #01633b;
+  color: white;
+  font-size: 2vh;
+  text-align: justify;
+}
+
+.adorno h1{
+  font-size: 4vh;
+  text-align: center;
+}
+
+.afectan{
+  display: flex;
+}
+
+.afectan h2{
+  text-align: center;
+  font-size: 3vh;
+}
+
+.afectan-personalidad{
+  padding: 20px;
+}
+
+.afectan-inteligencia{
+  padding: 20px;
+}
+
+@media (max-width: 921px    ){
+  .afectan{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px    ){
+  .afectan h2{
+    text-align: center;
+    font-size: 2.2vh;
+  }
+  
+  .afectan-personalidad{
+    padding: 0px;
+  }
+  
+  .afectan-inteligencia{
+    padding: 0px;
+  }
+
+  .adorno{
+    padding: 20px;
+    padding-left: 10px;
+    font-size: 2vh;
+  }
+
+  .adorno h1{
+    font-size: 2.3vh;
+    text-align: center;
+  }
+}
+
+.formulario-inex{
+  margin: 50px ;
+  font-size: 3.2vh;
+}
+
+.preg-personalidad{
+  width: 90%;
+  height: auto;
+  padding: 30px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.045),
+  0 0  0 2px rgb(190, 190, 190),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
