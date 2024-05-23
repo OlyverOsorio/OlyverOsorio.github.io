@@ -546,7 +546,7 @@ nav {
   position: relative;
   height: 2.8em;
   padding-right: 3.3em;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .cssbuttons-io-button .icon {
@@ -593,121 +593,74 @@ footer{
 }
 }
 
-.personalidad{
-  width: 50%;
-  padding: 20px;
-}
 
-.personalidad h1 {
-  text-align: center;
-  color: #01633b;
-}
 
-.inteligencia{
-  padding: 20px;
-  width: 50%;
-}
+/* PARTE PARA EL FORMULARIO */
 
-.inteligencia h1 {
-  text-align: center;
-  color: #01633b;
-}
-
-.definiciones{
+.tit-cuestionario-personalidad{
   margin: 30px;
-  display: flex;
-  font-size: 2.5vh;
-  text-align: justify;
-}
-
-@media (max-width: 695px){
-  .definiciones{
-    flex-wrap: wrap;
-  }
-  .personalidad{
-    width: 100%;
-  }
-  .inteligencia{
-    width: 100%;
-  }
-}
-
-.adorno{
-  padding: 30px;
-  background-color: #01633b;
-  color: white;
-  font-size: 2vh;
-  text-align: justify;
-}
-
-.adorno h1{
-  font-size: 4vh;
   text-align: center;
 }
-
-.afectan{
-  display: flex;
-}
-
-.afectan h2{
-  text-align: center;
-  font-size: 3vh;
-}
-
-.afectan-personalidad{
-  padding: 20px;
-}
-
-.afectan-inteligencia{
-  padding: 20px;
-}
-
-@media (max-width: 921px    ){
-  .afectan{
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 600px    ){
-  .afectan h2{
-    text-align: center;
-    font-size: 2.2vh;
-  }
-  
-  .afectan-personalidad{
-    padding: 0px;
-  }
-  
-  .afectan-inteligencia{
-    padding: 0px;
-  }
-
-  .adorno{
-    padding: 20px;
-    padding-left: 10px;
-    font-size: 2vh;
-  }
-
-  .adorno h1{
-    font-size: 2.3vh;
-    text-align: center;
-  }
-}
-
 .formulario-inex{
-  margin: 50px ;
+  padding: 50px ;
   font-size: 3.2vh;
 }
 
 .preg-personalidad{
   width: 90%;
   height: auto;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
   background: white;
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.045),
   0 0  0 2px rgb(190, 190, 190),
   0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+@media(max-width: 500px) {
+  .formulario-inex{
+    font-size: 2.3vh;
+    padding: 10px; 
+  }
+
+  .preg-personalidad{
+    padding: 20px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .tit-cuestionario-personalidad{
+    margin: 30px;
+    text-align:left ;
+    font-size: 4vh;
+  }
+}
+
+.preg-inteligencia{
+  width: 90%;
+  height: auto;
+  padding: 40px;
+  margin-bottom: 90px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.045),
+  0 0  0 2px rgb(190, 190, 190),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+@media(max-width: 500px) {
+  .formulario-inex{
+    font-size: 2.3vh;
+    margin: 20px; 
+  }
+
+  .preg-inteligencia{
+    padding: 20px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
 }
