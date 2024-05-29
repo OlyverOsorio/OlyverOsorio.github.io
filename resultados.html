@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        p{
+            font-size: 2.3vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="umes">
+            <img src="/recursos/logomeso.png" alt="Logo Mesoamericana">
+            <h1 class="titulo_encabezado">UMES</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/index.html">Objetivos</a></li>
+                <li><a href="/index.html">Tests</a></li>
+                <li><a href="/index.html">Contactanos</a></li>
+                <li><a href="/index.html">Encuentranos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 style="display: block; text-align: center; color: #01633c; font-size: 5vh;">Resultados</h1>
+
+    <section class="container">
+        <div style="margin-right: 20px;">
+            <h1 id="personality-result" style="font-size: 4vh;">Personalidad</h1>
+            <h2 id="personality-result-title">Cargando...</h2>
+            <p id="personality-result-description">Cargando...</p>
+        </div>
+        
+        <div>
+            <h1 id="intelligence-result" style="font-size: 4vh;">Inteligencia</h1>
+            <h2 id="intelligence-result-title">Cargando...</h2>
+            <p id="intelligence-result-description">Cargando...</p>
+        </div>  
+    </section>
+
+    <section class="container" style="background-color: white; color: #01633c;">
+        <div>
+            <h2  style="font-size: 4vh;" id="intelligence-advice-title">Cargando...</h2>
+            <p id="intelligence-advice-description">Cargando...</p>
+        </div>
+    </section>
+     
+    <section class="container">
+        <div>
+            <h3 id="studyMethodTitle" style="font-size: 3vh;">Cargando...</h3>
+            <p id="studyMethodDescription">Cargando...</p>
+        </div>
+    </section>
+
+    <div style="display: flex; justify-content: center;">
+        <a href="/index.html" style="display: flex; text-align: center; margin: 40px; text-decoration: none;">
+            <button class="btn2" style="font-size: 2vh;">
+                Regresar a inicio
+            </button>
+        </a>
+
+        <a href="/encuestas.html" style="display: flex; text-align: center; margin: 40px; text-decoration: none;">
+            <button class="btn2" style="font-size: 2vh;">
+                Realizar otro test
+            </button>
+        </a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var personalityResult = localStorage.getItem('personalityResult');
+            var intelligenceResult = localStorage.getItem('intelligenceResult');
+
+            var personalityTitle = document.getElementById('personality-result-title');
+            var personalityDescription = document.getElementById('personality-result-description');
+            var intelligenceTitle = document.getElementById('intelligence-result-title');
+            var intelligenceDescription = document.getElementById('intelligence-result-description');
+            var intelligenceAdviceTitle = document.getElementById('intelligence-advice-title');
+            var intelligenceAdviceDescription = document.getElementById('intelligence-advice-description');
+            var studyMethodTitle = document.getElementById('studyMethodTitle');
+            var studyMethodDescription = document.getElementById('studyMethodDescription');
+
+            // Configuración de la personalidad
+            switch (personalityResult) {
+                case 'Introvertido':
+                    personalityTitle.innerText = "Introvertido/a";
+                    personalityDescription.innerText = "Las personas introvertidas tienden a ser más reservadas y reflexivas. Prefieren pasar tiempo a solas o con un pequeño grupo de amigos cercanos en lugar de asistir a grandes reuniones sociales. Los introvertidos suelen encontrar energizante la soledad y agotador el exceso de interacción social. Son buenos observadores, escuchan activamente y piensan cuidadosamente antes de hablar. En entornos educativos y laborales, los introvertidos pueden sobresalir en tareas que requieren concentración y reflexión profunda.";
+                    break;
+                case 'Extrovertido':
+                    personalityTitle.innerText = "Extrovertido/a";
+                    personalityDescription.innerText = "Las personas extrovertidas son sociables, enérgicas y disfrutan estar rodeadas de gente. Se sienten revitalizadas en entornos sociales y buscan activamente oportunidades para interactuar con otros. Los extrovertidos son comunicativos, a menudo expresan sus pensamientos y emociones abiertamente, y les gusta ser el centro de atención. En entornos educativos y laborales, los extrovertidos tienden a sobresalir en actividades grupales, presentaciones y roles que requieren interacción constante con otros.";
+                    break;
+                case 'Ambivertido (una mezcla de ambas características)':
+                    personalityTitle.innerText = "Ambivertido/a";
+                    personalityDescription.innerText = "Las personas ambivertidas exhiben una mezcla equilibrada de rasgos introvertidos y extrovertidos. Pueden disfrutar tanto de la soledad como de la compañía de otros, dependiendo de la situación y su estado de ánimo. Los ambivertidos son flexibles y pueden adaptarse fácilmente a diferentes contextos sociales. Pueden ser reservados en algunos momentos y muy comunicativos en otros. Esta adaptabilidad les permite manejar una variedad de tareas y entornos de manera efectiva, tanto en la educación como en el trabajo.";
+                    break;
+                default:
+                    personalityTitle.innerText = "No definido";
+                    personalityDescription.innerText = "No se ha podido determinar el tipo de personalidad.";
+            }
+
+            // Configuración de la inteligencia
+            switch (intelligenceResult) {
+                case 'Lógica/Matemática':
+                    intelligenceTitle.innerText = "Inteligencia Lógica/Matemática";
+                    intelligenceDescription.innerText = "Las personas con inteligencia lógica/matemática tienen habilidades fuertes en razonamiento lógico, análisis y resolución de problemas complejos. Disfrutan trabajando con números, patrones y conceptos abstractos. Son buenos en matemáticas, ciencias y tecnología. Este tipo de inteligencia permite a las personas desarrollar teorías, realizar cálculos precisos y abordar problemas de manera sistemática. En entornos académicos, tienden a sobresalir en asignaturas que requieren pensamiento crítico y analítico.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia lógica/matemática:";
+                    intelligenceAdviceDescription.innerText = "Para reforzar tu inteligencia lógica/matemática, te recomiendo practicar regularmente problemas de matemáticas y lógica. Participa en actividades como resolver rompecabezas, realizar ejercicios de razonamiento y analizar problemas de la vida real. Además, considera inscribirte en cursos adicionales de matemáticas y ciencias para ampliar tus conocimientos y habilidades en estas áreas.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia lógica/matemática:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia lógica/matemática e introvertido, te beneficiará estructurar tu estudio en sesiones regulares y prácticas. Utiliza técnicas de resolución de problemas y análisis de casos para comprender mejor los conceptos. Dedica tiempo a practicar ejercicios de matemáticas y lógica fuera del horario de clase. Usa recursos como libros de texto y tutoriales en línea para profundizar en los temas que encuentres más desafiantes.";
+                    break;
+                case 'Kinestésica/Corporal':
+                    intelligenceTitle.innerText = "Inteligencia Kinestésica/Corporal";
+                    intelligenceDescription.innerText = "Las personas con inteligencia kinestésica/corporal tienen una gran capacidad para controlar y coordinar sus movimientos corporales. Aprenden mejor a través de la experiencia práctica, el movimiento físico y las actividades manuales. Disfrutan de los deportes, la danza, la artesanía y cualquier actividad que implique el uso activo del cuerpo. Este tipo de inteligencia es crucial para atletas, bailarines, cirujanos y artesanos. En entornos educativos, pueden sobresalir en educación física, teatro y artes prácticas.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia kinestésica/corporal:";
+                    intelligenceAdviceDescription.innerText = "Para reforzar tu inteligencia kinestésica/corporal, te sugiero participar en actividades que involucren movimiento físico y práctica activa. Dedica tiempo a practicar deportes, danza o actividades manuales como la carpintería o la cerámica. Además, considera explorar nuevas formas de expresión corporal y participar en clases o talleres relacionados con tus intereses físicos.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia kinestésica/corporal:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia kinestésica/corporal e introvertido, te beneficiará incorporar el movimiento en tus sesiones de estudio. Realiza ejercicios prácticos y proyectos que requieran el uso activo del cuerpo. Alterna entre sesiones de estudio intensivo y breves descansos activos para mantener la concentración. Considera estudiar en diferentes entornos para estimular tu aprendizaje y utilizar materiales tangibles siempre que sea posible.";
+                    break;
+                case 'Musical':
+                    intelligenceTitle.innerText = "Inteligencia Musical";
+                    intelligenceDescription.innerText = "Las personas con inteligencia musical tienen una sensibilidad especial para los sonidos, ritmos y patrones musicales. Son capaces de reconocer, crear y reproducir música con facilidad. Disfrutan de cantar, tocar instrumentos y componer música. Este tipo de inteligencia es fundamental para músicos, compositores y directores de orquesta. En entornos educativos, suelen sobresalir en asignaturas relacionadas con la música y pueden utilizar la música como herramienta para aprender otras materias.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia musical:";
+                    intelligenceAdviceDescription.innerText = "Para fortalecer tu inteligencia musical, te recomiendo dedicar tiempo a practicar y explorar diferentes aspectos de la música. Aprende a tocar un instrumento musical o mejora tus habilidades vocales mediante clases de canto. Escucha una amplia variedad de géneros musicales y presta atención a la estructura, armonía y ritmo de las canciones. Además, considera componer tu propia música y participar en grupos musicales o coros.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia musical:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia musical e introvertido, puedes usar la música como una herramienta para mejorar tu concentración. Escucha música instrumental mientras estudias para crear un ambiente agradable y minimizar las distracciones. Crea canciones o ritmos que te ayuden a recordar conceptos y fórmulas importantes. Alterna tus sesiones de estudio con breves descansos musicales para mantener la motivación.";
+                    break;
+                case 'Visual/Espacial':
+                    intelligenceTitle.innerText = "Inteligencia Visual/Espacial";
+                    intelligenceDescription.innerText = "Las personas con inteligencia visual/espacial tienen una gran capacidad para visualizar y manipular objetos en su mente. Son buenas en actividades que requieren percepción espacial, como el dibujo, la arquitectura y la navegación. Disfrutan de los puzzles, los juegos de construcción y las artes visuales. Este tipo de inteligencia es crucial para artistas, arquitectos, diseñadores y pilotos. En entornos educativos, pueden sobresalir en asignaturas como arte, geometría y geografía.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia visual/espacial:";
+                    intelligenceAdviceDescription.innerText = "Para mejorar tu inteligencia visual/espacial, te sugiero practicar actividades que estimulen tu percepción y comprensión del espacio y la forma. Dedica tiempo a dibujar, pintar o realizar actividades de diseño. Resuelve rompecabezas y juegos de construcción que requieran pensar en tres dimensiones. Además, considera explorar disciplinas como la arquitectura o la cartografía, que se basan en la capacidad de visualizar y representar el espacio.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia visual/espacial:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia visual/espacial e introvertido, te beneficiará utilizar mapas mentales, diagramas y gráficos para organizar y comprender la información. Crea representaciones visuales de conceptos y problemas para facilitar el aprendizaje. Dedica tiempo a resolver puzzles y juegos que estimulen tu percepción espacial. Utiliza herramientas de diseño y software que te permitan visualizar y manipular datos y estructuras.";
+                    break;
+                case 'Lingüística':
+                    intelligenceTitle.innerText = "Inteligencia Lingüística";
+                    intelligenceDescription.innerText = "Las personas con inteligencia lingüística tienen una gran habilidad para utilizar el lenguaje de manera efectiva. Son buenos en la lectura, la escritura, el debate y la narración. Disfrutan de las palabras, los juegos de palabras y la escritura creativa. Este tipo de inteligencia es crucial para escritores, periodistas, abogados y oradores. En entornos educativos, tienden a sobresalir en asignaturas relacionadas con la lengua y la literatura.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia lingüística:";
+                    intelligenceAdviceDescription.innerText = "Para fortalecer tu inteligencia lingüística, te recomiendo leer y escribir de manera regular para expandir tu vocabulario y mejorar tus habilidades de expresión escrita. Participa en debates y discusiones para practicar el uso efectivo del lenguaje y desarrollar tu capacidad de argumentación. Además, considera estudiar otros idiomas y explorar diferentes formas de expresión literaria, como la poesía o la escritura creativa.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia lingüística:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia lingüística e introvertido, puedes beneficiarte de escribir resúmenes y explicaciones detalladas de los conceptos que aprendes. Participa en foros y discusiones en línea para intercambiar ideas y practicar tu habilidad para comunicarte claramente. Utiliza técnicas de memorización basadas en la escritura, como tomar notas detalladas y crear tarjetas de estudio.";
+                    break;
+                case 'Interpersonal':
+                    intelligenceTitle.innerText = "Inteligencia Interpersonal";
+                    intelligenceDescription.innerText = "Las personas con inteligencia interpersonal tienen una gran capacidad para entender y relacionarse con otras personas. Son buenos en la comunicación, la empatía y la gestión de relaciones. Disfrutan trabajando en equipo, ayudando a otros y liderando grupos. Este tipo de inteligencia es crucial para maestros, terapeutas, líderes comunitarios y profesionales de recursos humanos. En entornos educativos, pueden sobresalir en asignaturas que requieren interacción social y colaboración.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia interpersonal:";
+                    intelligenceAdviceDescription.innerText = "Para mejorar tu inteligencia interpersonal, te recomiendo desarrollar tus habilidades de comunicación y empatía mediante la participación activa en actividades grupales y proyectos colaborativos. Practica escuchar activamente a los demás, comprende sus puntos de vista y muestra interés genuino en sus preocupaciones. Además, considera involucrarte en actividades de servicio comunitario y liderazgo, donde puedas aplicar tus habilidades para ayudar y motivar a otros.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia interpersonal:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia interpersonal e introvertido, te beneficiará trabajar en grupos pequeños y colaborar en proyectos conjuntos. Participa en estudios de grupo y discusiones donde puedas intercambiar ideas y recibir retroalimentación. Utiliza tus habilidades para crear un ambiente de estudio positivo y de apoyo. Involúcrate en actividades extracurriculares que te permitan interactuar con otros y fortalecer tus habilidades sociales.";
+                    break;
+                case 'Intrapersonal':
+                    intelligenceTitle.innerText = "Inteligencia Intrapersonal";
+                    intelligenceDescription.innerText = "Las personas con inteligencia intrapersonal tienen una gran capacidad para comprenderse a sí mismas. Son conscientes de sus emociones, motivaciones y metas personales. Disfrutan de la auto-reflexión, la meditación y el trabajo independiente. Este tipo de inteligencia es crucial para psicólogos, filósofos, escritores y cualquier persona que necesite una profunda comprensión personal. En entornos educativos, tienden a sobresalir en tareas que requieren auto-disciplina y auto-motivación.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia intrapersonal:";
+                    intelligenceAdviceDescription.innerText = "Para fortalecer tu inteligencia intrapersonal, te sugiero dedicar tiempo a la auto-reflexión y el autoconocimiento. Identifica tus fortalezas, debilidades y metas personales, y trabaja en desarrollar una mayor conciencia de ti mismo. Practica la meditación y el mindfulness para cultivar la calma interior y la claridad mental. Además, establece objetivos realistas y desarrolla estrategias efectivas para alcanzarlos, aprovechando tu capacidad innata para la auto-motivación y la auto-superación.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia intrapersonal:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia intrapersonal e introvertido, te beneficiará establecer metas claras y desarrollar un plan de estudio personal. Dedica tiempo a la auto-reflexión para identificar tus áreas de mejora y ajustar tus métodos de estudio en consecuencia. Utiliza técnicas de mindfulness y meditación para reducir el estrés y mejorar la concentración. Mantén un diario de estudio para seguir tu progreso y reflexionar sobre tus logros.";
+                    break;
+                case 'Naturalista':
+                    intelligenceTitle.innerText = "Inteligencia Naturalista";
+                    intelligenceDescription.innerText = "Las personas con inteligencia naturalista tienen una gran capacidad para reconocer y categorizar plantas, animales y otros elementos de la naturaleza. Disfrutan al aire libre, estudiando la naturaleza y cuidando el medio ambiente. Este tipo de inteligencia es crucial para biólogos, agricultores, conservacionistas y veterinarios. En entornos educativos, tienden a sobresalir en asignaturas relacionadas con la biología, la geología y la ecología.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar la inteligencia naturalista:";
+                    intelligenceAdviceDescription.innerText = "Para fortalecer tu inteligencia naturalista, te recomiendo pasar tiempo al aire libre y explorar diferentes entornos naturales. Observa y estudia las plantas, los animales y los fenómenos naturales que encuentres, y lleva un diario o registro de tus observaciones. Participa en actividades de conservación ambiental y aprende sobre la importancia de preservar la biodiversidad. Además, considera realizar excursiones de campo y unirte a grupos o clubes de naturaleza.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado para inteligencia naturalista:";
+                    studyMethodDescription.innerText = "Como estudiante de ingeniería con inteligencia naturalista e introvertido, te beneficiará estudiar en entornos naturales que te inspiren. Utiliza ejemplos del mundo natural para comprender conceptos de ingeniería. Participa en proyectos que tengan un impacto positivo en el medio ambiente. Dedica tiempo a la observación y el estudio de fenómenos naturales, y utiliza este conocimiento para mejorar tus habilidades y enfoques de estudio.";
+                    break;
+                default:
+                    intelligenceTitle.innerText = "No definido";
+                    intelligenceDescription.innerText = "No se ha podido determinar el tipo de inteligencia.";
+                    intelligenceAdviceTitle.innerText = "Consejo para reforzar tu inteligencia:";
+                    intelligenceAdviceDescription.innerText = "Para mejorar tu inteligencia, te recomiendo identificar tus fortalezas y áreas de mejora en función de tus intereses y habilidades. Dedica tiempo a desarrollar y practicar actividades que estimulen tu mente y fomenten tu crecimiento personal y profesional. Explora diferentes formas de aprendizaje y busca oportunidades para expandir tus conocimientos y habilidades en áreas relevantes para tu carrera y tus metas personales.";
+                    studyMethodTitle.innerText = "Método de estudio recomendado:";
+                    studyMethodDescription.innerText = "Para mejorar tu rendimiento académico, identifica tus fortalezas y áreas de mejora. Dedica tiempo a desarrollar y practicar actividades que estimulen tu mente y fomenten tu crecimiento personal y profesional. Explora diferentes formas de aprendizaje y busca oportunidades para expandir tus conocimientos y habilidades en áreas relevantes para tu carrera y tus metas personales.";
+            }
+
+            // Ajustar el método de estudio según la personalidad
+            switch (personalityResult) {
+                case 'Introvertido':
+                    studyMethodTitle.innerText += " (Introvertido)";
+                    studyMethodDescription.innerText += " Como persona introvertida, es probable que prefieras estudiar en entornos tranquilos y sin distracciones. Dedica tiempo a la auto-reflexión y a la organización de tu tiempo de estudio. Utiliza técnicas de aprendizaje que te permitan profundizar en los temas y trabajar de manera independiente. Considera usar recursos en línea y herramientas digitales para complementar tu estudio.";
+                    break;
+                case 'Extrovertido':
+                    studyMethodTitle.innerText += " (Extrovertido)";
+                    studyMethodDescription.innerText += " Como persona extrovertida, es probable que te beneficies de estudiar en grupo y participar en discusiones activas. Busca oportunidades para colaborar con tus compañeros y participar en proyectos conjuntos. Utiliza técnicas de aprendizaje que involucren la interacción social y el intercambio de ideas. Considera enseñar a otros lo que has aprendido, ya que esto puede fortalecer tu comprensión de los temas.";
+                    break;
+                case 'Ambivertido (una mezcla de ambas características)':
+                    studyMethodTitle.innerText += " (Ambivertido)";
+                    studyMethodDescription.innerText += " Como persona ambivertida, es probable que puedas adaptarte tanto a entornos de estudio solitarios como colaborativos. Encuentra un equilibrio entre estudiar solo y en grupo, dependiendo de tus necesidades y del tipo de tarea. Utiliza técnicas de aprendizaje que te permitan aprovechar tus momentos de introspección y tus habilidades sociales. Considera alternar entre sesiones de estudio individual y actividades grupales para mantener el interés y la motivación.";
+                    break;
+                default:
+                    studyMethodTitle.innerText += " (No definido)";
+                    studyMethodDescription.innerText += " No se ha podido determinar tu tipo de personalidad, pero puedes experimentar con diferentes métodos de estudio para encontrar el que mejor se adapte a tus preferencias y necesidades. Observa cómo te sientes más cómodo y productivo al estudiar, y ajusta tus técnicas de aprendizaje en consecuencia. Explora tanto el estudio independiente como el colaborativo para descubrir lo que funciona mejor para ti.";
+            }
+        });
+    </script>
+</body>
+</html>
